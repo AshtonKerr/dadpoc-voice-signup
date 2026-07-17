@@ -67,8 +67,8 @@ window.VOICE_CASTING_CHARACTERS = [
     "name": "Deb Neufeld",
     "description": "Deb Neufeld, 64. Day shift, rye-and-water, retired off the cheese-plant line. The House's memory: watched Richard and Dawn the doubles team for fifteen years and scores the present against it without mercy.",
     "color": "#b88c8c",
-    "art": "",
-    "artKind": "none",
+    "art": "assets/characters/deb.png",
+    "artKind": "portrait",
     "filename": "Deb_Neufeld.wav"
   },
   {
@@ -157,8 +157,8 @@ window.VOICE_CASTING_CHARACTERS = [
     "name": "Lorraine Bosch",
     "description": "Lorraine Bosch, 61. Fifteen years sober; runs the Tuesday AA meeting like a woman stacking chairs — no halo, no pitch, no chase. What the road out actually looks like.",
     "color": "#b29e8c",
-    "art": "",
-    "artKind": "none",
+    "art": "assets/characters/lorraine.png",
+    "artKind": "portrait",
     "filename": "Lorraine_Bosch.wav"
   },
   {
@@ -193,8 +193,8 @@ window.VOICE_CASTING_CHARACTERS = [
     "name": "Phyllis Wray",
     "description": "Phyllis Wray, 68. Runs the Saturday Legion meat draw with the gravity of a returning officer. She and Wendell have been not-courting for six years. Pays in roasts, both kinds.",
     "color": "#bf8073",
-    "art": "",
-    "artKind": "none",
+    "art": "assets/characters/phyllis.png",
+    "artKind": "portrait",
     "filename": "Phyllis_Wray.wav"
   },
   {
