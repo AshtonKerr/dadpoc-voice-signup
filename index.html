@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#24170f" />
+    <meta name="description" content="Claim a Divorced Dad RPG character voice and record a short sound-font sample." />
+    <title>Halfway House Voice Signup</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#characters">Skip to the character board</a>
+    <header class="hero">
+      <div class="hero__eyebrow">DIVORCED DAD RPG • COMMUNITY CASTING NOTICE</div>
+      <h1>Halfway House<br /><span>Voice Signup</span></h1>
+      <p class="hero__lede">Pick somebody you can hear in your head. Make one tiny noise. Become local history.</p>
+      <div class="hero__stamp" aria-hidden="true">NO EXPERIENCE<br />REQUIRED</div>
+    </header>
+
+    <main>
+      <section class="notice paper" aria-labelledby="how-title">
+        <div>
+          <p class="kicker">THE JOB</p>
+          <h2 id="how-title">Every character needs a sound.</h2>
+          <p>
+            The game uses quick vocal noises while dialogue types out—not full spoken lines. Listen to Howie's
+            current example, claim a character, then imitate this kind of brief sound in that character's voice.
+          </p>
+          <audio class="sample" controls preload="metadata">
+            <source src="assets/lawyersoundfont.wav" type="audio/wav" />
+            Your browser cannot play the sample. Download <a href="assets/lawyersoundfont.wav">the WAV file</a> instead.
+          </audio>
+        </div>
+        <ol class="steps">
+          <li><b>Write your first name or nickname</b> once below.</li>
+          <li><b>Claim any available character.</b> You may claim more than one.</li>
+          <li><b>Record one short sound</b> and use the exact filename shown on the card.</li>
+          <li><b>Send it on Discord</b> in <code>divorced-dad-rpg</code>, inside LR's Potato Mashing Fan Club.</li>
+        </ol>
+      </section>
+
+      <section class="identity paper" aria-labelledby="identity-title">
+        <div>
+          <p class="kicker">SIGN THE SHEET</p>
+          <h2 id="identity-title">Who are you?</h2>
+          <p>Use only a first name or nickname. It will be visible to anyone who has this link.</p>
+        </div>
+        <label class="name-field">
+          <span>First name or nickname</span>
+          <input id="volunteer-name" type="text" maxlength="40" autocomplete="nickname" placeholder="e.g. Ash" />
+        </label>
+      </section>
+
+      <section class="board" id="characters" aria-labelledby="board-title">
+        <div class="board__header">
+          <div>
+            <p class="kicker">CASTING BOARD</p>
+            <h2 id="board-title">Choose your local legend.</h2>
+          </div>
+          <div class="progress" aria-live="polite">
+            <strong id="claimed-count">—</strong>
+            <span>voices claimed</span>
+          </div>
+        </div>
+
+        <div class="toolbar" aria-label="Character filters">
+          <label class="search-field">
+            <span class="sr-only">Search characters</span>
+            <input id="search" type="search" placeholder="Search a name or description…" />
+          </label>
+          <div class="filters" role="group" aria-label="Claim status">
+            <button class="filter is-active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="available">Unclaimed</button>
+            <button class="filter" type="button" data-filter="claimed">Claimed</button>
+          </div>
+        </div>
+
+        <div id="board-message" class="board-message" role="status">Loading the signup sheet…</div>
+        <div id="character-grid" class="character-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="recording paper" aria-labelledby="recording-title">
+        <div>
+          <p class="kicker">RECORDING INSTRUCTIONS</p>
+          <h2 id="recording-title">Keep it short, clean, and weird.</h2>
+        </div>
+        <div class="recording__columns">
+          <article>
+            <h3>On a computer</h3>
+            <ol>
+              <li><a href="https://www.audacityteam.org/download/" target="_blank" rel="noreferrer">Download Audacity</a>.</li>
+              <li>Use one microphone in a quiet room. Stay about a hand-span away.</li>
+              <li>Record the sound once or twice. Leave a little silence before and after.</li>
+              <li>Trim the extra takes. Do not add reverb, pitch effects, or music.</li>
+              <li>Export as WAV, 16-bit PCM, mono. Use the filename on the character card.</li>
+            </ol>
+          </article>
+          <article>
+            <h3>On iPhone or Android</h3>
+            <ol>
+              <li>Use Voice Memos, Recorder, or the phone's built-in recording app.</li>
+              <li>Record in a quiet, soft room and keep the phone a hand-span away.</li>
+              <li>Send the original file—even if the phone saves M4A instead of WAV. It can be converted.</li>
+              <li>Rename it to the filename shown on the card if your phone allows it; otherwise include the character name in the Discord message.</li>
+            </ol>
+          </article>
+        </div>
+        <div class="format-note"><b>Best:</b> WAV &nbsp;•&nbsp; <b>Game-ready:</b> WAV, Ogg Vorbis, MP3 &nbsp;•&nbsp; <b>Phone originals:</b> accepted for conversion</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>THE HALFWAY HOUSE ACCEPTS NO RESPONSIBILITY FOR CAREERS LAUNCHED ON THESE PREMISES.</p>
+    </footer>
+
+    <template id="character-template">
+      <article class="character-card">
+        <div class="character-card__tape" aria-hidden="true"></div>
+        <div class="character-card__art-wrap" hidden>
+          <img class="character-card__art" alt="" loading="lazy" />
+        </div>
+        <div class="character-card__body">
+          <div class="character-card__heading">
+            <h3></h3>
+            <span class="status-pill"></span>
+          </div>
+          <p class="character-card__description"></p>
+          <div class="filename-row">
+            <span>Save as</span>
+            <code></code>
+            <button class="copy-button" type="button">Copy</button>
+          </div>
+          <button class="claim-button" type="button">Claim this voice</button>
+          <p class="claim-note" aria-live="polite"></p>
+        </div>
+      </article>
+    </template>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="config.js"></script>
+    <script src="characters.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
