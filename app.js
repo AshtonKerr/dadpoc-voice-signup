@@ -30,6 +30,30 @@
     return value.replace(/\s+/g, " ").trim().slice(0, 40);
   }
 
+  function readSessionValue(key) {
+    try {
+      return window.sessionStorage.getItem(key) || "";
+    } catch (_error) {
+      return "";
+    }
+  }
+
+  function writeSessionValue(key, value) {
+    try {
+      window.sessionStorage.setItem(key, value);
+    } catch (_error) {
+      // Storage can be unavailable in strict privacy modes; the form still works.
+    }
+  }
+
+  function clearLegacyVolunteerName() {
+    try {
+      window.localStorage.removeItem("voiceCastingVolunteerName");
+    } catch (_error) {
+      // Ignore unavailable storage and continue without persistence.
+    }
+  }
+
   function showToast(message) {
     elements.toast.textContent = message;
     elements.toast.classList.add("is-visible");
@@ -129,7 +153,7 @@
       return;
     }
     elements.name.value = name;
-    window.localStorage.setItem("voiceCastingVolunteerName", name);
+    writeSessionValue("voiceCastingVolunteerName", name);
     state.pendingCharacter = character.id;
     render();
 
@@ -211,12 +235,13 @@
     }
   }
 
-  elements.name.value = window.localStorage.getItem("voiceCastingVolunteerName") || "";
+  clearLegacyVolunteerName();
+  elements.name.value = readSessionValue("voiceCastingVolunteerName");
   elements.name.addEventListener("input", render);
   elements.name.addEventListener("change", () => {
     const value = normalizeName(elements.name.value);
     elements.name.value = value;
-    window.localStorage.setItem("voiceCastingVolunteerName", value);
+    writeSessionValue("voiceCastingVolunteerName", value);
     render();
   });
   elements.search.addEventListener("input", () => {

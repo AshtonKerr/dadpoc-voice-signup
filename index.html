@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; base-uri 'none'; connect-src 'self'; font-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self' https://script.google.com https://script.googleusercontent.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
     <meta name="theme-color" content="#24170f" />
     <meta name="description" content="Claim a Divorced Dad RPG character voice and record a short sound-font sample." />
     <title>Halfway House Voice Signup</title>
@@ -47,7 +53,7 @@
         </div>
         <label class="name-field">
           <span>First name or nickname</span>
-          <input id="volunteer-name" type="text" maxlength="40" autocomplete="nickname" placeholder="e.g. Ash" />
+          <input id="volunteer-name" type="text" maxlength="40" autocomplete="off" placeholder="e.g. Ash" />
         </label>
       </section>
 
