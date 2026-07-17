@@ -104,7 +104,7 @@ window.VOICE_CASTING_CHARACTERS = [
     "description": "Gary Pfaff, 66. Retired grade-6 teacher; owns the property line next to Richard's rental and a lawn with a program. The house-decay channel's narrator, entirely in weather-adjacent passive voice.",
     "color": "#9eb880",
     "art": "assets/characters/gary.png",
-    "artKind": "sprite",
+    "artKind": "portrait",
     "filename": "Gary_Pfaff.wav"
   },
   {
@@ -140,7 +140,7 @@ window.VOICE_CASTING_CHARACTERS = [
     "description": "Justice Gord Bassett, 63. Rural circuit judge who has also called Halfway Jr. C on CKHW for twenty years — the town's Saturday-night voice and its consequences, one job. Patient, precise, unmoved by charm.",
     "color": "#806b8c",
     "art": "assets/characters/bassett.png",
-    "artKind": "sprite",
+    "artKind": "portrait",
     "filename": "Justice_Bassett.wav"
   },
   {
@@ -203,7 +203,7 @@ window.VOICE_CASTING_CHARACTERS = [
     "description": "Preston Wick, 45. Dawn's lawyer, out of Kingston. Immaculate; bills in six-minute increments. The antagonist who is simply correct — never raises his voice because the dates are enough.",
     "color": "#597399",
     "art": "assets/characters/wick.png",
-    "artKind": "sprite",
+    "artKind": "portrait",
     "filename": "Preston_Wick.wav"
   },
   {
@@ -221,7 +221,7 @@ window.VOICE_CASTING_CHARACTERS = [
     "description": "Sherry Molnar, 49. Manager of Halfway Memorial Gardens (the arena). Divorced a Richard-type, so she has lifetime immunity to the act — and re-floods the schedule so his shifts meet Frankie's practices anyway.",
     "color": "#8c9ead",
     "art": "assets/characters/sherry.png",
-    "artKind": "sprite",
+    "artKind": "portrait",
     "filename": "Sherry_Molnar.wav"
   },
   {
@@ -230,7 +230,7 @@ window.VOICE_CASTING_CHARACTERS = [
     "description": "Gordon \"Sudsy\" Sudsbury, 54. Runs the House's back room: Thursday euchre for money, a fence's eye for found metal. Not a villain — a small business. Never lies to Richard once, all game.",
     "color": "#808580",
     "art": "assets/characters/sudsy.png",
-    "artKind": "sprite",
+    "artKind": "portrait",
     "filename": "Sudsy.wav"
   },
   {
@@ -266,7 +266,7 @@ window.VOICE_CASTING_CHARACTERS = [
     "description": "Wendell Deacon, 71. Wendell's Towing & Salvage; the tow_yard is his. Sober since '79 but never reckoned — speaks exclusively in vehicle metaphor and torque spec. The mirror's mirror.",
     "color": "#8c806b",
     "art": "assets/characters/wendell.png",
-    "artKind": "sprite",
+    "artKind": "portrait",
     "filename": "Wendell_Deacon.wav"
   }
 ];
